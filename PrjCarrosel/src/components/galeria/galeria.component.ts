@@ -7,5 +7,23 @@ import { Component } from '@angular/core';
 })
 export class GaleriaComponent {
 
+  fotoAtual = 0;
+
+  VoltarPrimeriaFoto() {
+    
+  }
+
+  IrProximaFoto(){
+
+  }
+
+  VoltarFoto(){
+
+  }
+
+  IrUltimaFoto(){
+
+  }
+
 
 }
