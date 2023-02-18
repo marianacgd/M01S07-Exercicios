@@ -1,6 +1,15 @@
-<h1>Fotos de animes</h1>
+<div class="jumbotron">
+  <h3>{{title}}</h3>
 
-
-
-<p>Foto</p>
+  <div *ngIf="fotos.length > 0">
+    <img [src]="fotos[fotoAtual]" style="margin: 2rem; width: 70%;">
+    <div>
+      Foto {{fotoAtual + 1}} de {{ fotos.length}}
+      <button (click)="voltarParaPrimeira()" [disabled]="fotoAtual === primeira()"> |< </button>
+      <button (click)="voltarParaAnterior()" [disabled]="fotoAtual === primeira()"> < </button>
+      <button (click)="vaiParaProxima()" [disabled]="fotoAtual === ultima()"> > </button>
+      <button (click)="vaiParaUltima()" [disabled]="fotoAtual === ultima()"> >| </button>
+    </div>
+  </div>
+</div>
 
